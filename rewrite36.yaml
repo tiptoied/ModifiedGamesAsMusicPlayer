@@ -1,0 +1,97 @@
+product-id: 36
+comment: MusicPlayer
+media-path: media/%s
+welcome: Hallo,0,0new
+replay: 4010
+
+language: de
+speak:
+  Hallo: "Musik Player"
+  Vor: "+"
+  Zuruck: "-"
+  Seite: "Seite"
+  comment: Zahl needed
+  Stop: "."
+  Zahl1: "1"
+  Zahl2: "2"
+  Zahl3: "3"
+  Zahl4: "4"
+  Zahl5: "5"
+  Zahl6: "6"
+  Zahl7: "7"
+  Zahl8: "8"
+  Zahl9: "9"
+  Zahl0: "0"
+  Ende: "Ende"
+
+scripts:
+  4074:
+  - $Page == 1? P(1)
+  - $Page == 2? P(14)
+
+  4075:
+  - $Page == 1? P(2)
+  - $Page == 2? P(15)
+
+  4065:
+  - $Page == 1? P(3)
+  - $Page == 2? P(16)
+
+  4066:
+  - $Page == 1? P(4)
+  - $Page == 2? P(17)
+
+  4067:
+  - $Page == 1? P(5)
+  - $Page == 2? P(18)
+
+  4068:
+  - $Page == 1? P(6)
+  - $Page == 2? P(19)
+
+  4076:
+  - $Page == 1? P(7)
+  - $Page == 2? P(20)
+
+  4077:
+  - $Page == 1? P(8)
+  - $Page == 2? P(21)
+
+  4070:
+  - $Page == 1? P(9)
+  - $Page == 2? P(22)
+
+  4071:
+  - $Page == 1? P(10)
+  - $Page == 2? P(23)
+
+  4069:
+  - $Page == 1? P(11)
+  - $Page == 2? P(23)
+
+  4072:
+  - $Page == 1? P(12)
+  - $Page == 2? P(24)
+
+  4073:
+  - $Page == 1? P(13)
+  - $Page == 2? P(25)
+
+  4001:
+  - $Page == 1? P(Zuruck) P(Ende)
+  - $Page == 2? P(Zuruck) P(Seite) P(Zahl1) $Page -= 1
+  - $Page == 3? P(Zuruck) P(Seite) P(Zahl2) $Page -= 1
+
+  4002:
+  - P(Stop)
+  - $Page == 0? P(Seite) P(Zahl0)
+
+  4003:
+  - $Page == 0? P(Vor) P(Seite) P(Zahl1) $Page += 1
+  - $Page == 1? P(Vor) P(Seite) P(Zahl2) $Page += 1
+  - $Page == 2? P(Vor) P(Seite) P(Zahl3) $Page += 1
+
+  4024:
+  - $Page == 1? P(Seite) P(Zahl1)
+  - $Page == 2? P(Seite) P(Zahl2)
+  - $Page == 3? P(Seite) P(Zahl2)
